@@ -1,0 +1,15 @@
+Deploy Argo CD to Kubernetes
+Use the terminal to deploy Argo CD:
+
+
+copy
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/codefresh-contrib/gitops-certification-examples/main/argocd-noauth/install.yaml
+This will create a new namespace, argocd, where Argo CD services and application resources will live.
+
+To view the deployment enter
+
+
+copy
+kubectl get pods -n argocd
+Note that this is simple installation method without any authentication. In a real setting you would probably setup SSO with your ArgoCD instance.
